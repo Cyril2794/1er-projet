@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet perso</title>
+    <style>
+        body { font-family: sans-serif; margin: 2em; }
+        label { display: block; margin-top: 1em; }
+        #message { color: green; margin-top: 1em; }
+      </style>
+    <link rel="stylesheet" href="Perso.css">
+</head>
+<body>
+   
+    <h1>Projet</h1>
+
+    <p>Voici mon projet de tout ce que j'ai appris en individuel</p>
+
+    <h2>Les liens vers les sites d'offres d'emploi</h2>
+
+    <a href="https://fr.indeed.com/">Indeed</a>
+    <br>
+    <br>
+    <a href="https://candidat.francetravail.fr/offres/emploi/">France Travail : emploi</a>
+    <br>
+    <br>
+    <a href="https://www.hellowork.com/fr-fr/emploi.html">hellowork</a>
+    <h2> Les liens vers les sites d'offres de formations</h2>
+    <a href="https://candidat.francetravail.fr/formations/recherche">France Travail : Formations</a>
+    <br>
+    <br>
+    <a href="https://oriane.info/">Oriane: pour les franciliens</a>
+    <h2>Le lien vers France compétence</h2>
+    <a href="https://www.francecompetences.fr/">France Compétences</a>
+    <br>
+    <br>
+    <br>
+    <form id="satisfactionform">
+        <label>
+            Votre nom:
+            <input type="text" id="nom" required>
+        </label>
+        <br>
+        <label>
+            Votre prénom
+            <input type="text" id="prénom" required>
+        </label>
+        <br>
+        <label>
+            Etes vous satisfait ?
+            <select id="avis" required>
+            <option value="Oui"></option>
+            <option value="Moyen"></option>
+            <option value="Non"></option>
+            </select>
+        </label>
+
+        <label>
+            Commentaire:
+            <textarea id="Commentaire"></textarea>
+        </label>
+        <br>
+
+        <button type="submit">envoyer</button>
+
+        <div id="message"></div>
+       
+
+
+    </form>
+    <script>
+
+const form= document.getElementById("satisfactionform")
+
+form.addEventListener ( "submit",fonctionevent )
+    event.preventDefault();
+
+    const nom=document.getElementById ('nom').value;
+    const avis=document.getElementById ('avis').value;
+    const Commentaire=document.getElementById ("Commentaire").value
+
+    const element= 'Merci pour votre message' ("avis")  ;
+    
+
+    document.getElementById('message').textContent=message;
+
+    formreset ()
+
+
+    </script>
+    
+    
+</body>
+</html>
